@@ -1,9 +1,7 @@
-// models/students.js
-
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require('../utils/db-connection');
 
-const students = sequelize.define('students', {
+const Students = sequelize.define('students', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -17,8 +15,8 @@ const students = sequelize.define('students', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, // Optional: ensure unique emails
+        
     }
-});
+},{timestamps:true});
 
-module.exports = students;
+module.exports = Students;

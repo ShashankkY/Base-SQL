@@ -22,3 +22,6 @@ db.sync({force:false}).then(()=>{
     console.log(err);
 })
 
+
+
+
